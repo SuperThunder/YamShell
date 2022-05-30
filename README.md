@@ -72,8 +72,7 @@ Anywhere in your code can print to the CLI as long as it can access the YamShell
 
 
 ## EventQueue
-As shown in the [Mbed docs](https://os.mbed.com/docs/mbed-os/v6.15/apis/scheduling-tutorials.html), EventQueues can be used to move the execution of printf from ISR or high performance context (printf not allowed and undesirable anyway) to an EventQueue thread.
-TODO
+As shown in the [Mbed docs](https://os.mbed.com/docs/mbed-os/v6.15/apis/scheduling-tutorials.html), EventQueues can be used to move the execution of printf from ISR or high performance context (printf not allowed and undesirable anyway) to an EventQueue thread. This can be used with the YamShell functions, except for printf, as Mbed Callback does not support variadic member functions.
 
 # Example
 Example program using YamShell to provide an interface for a PWM fan interface [here](https://github.com/SuperThunder/Mbed-OS6-4PinFanPWM/blob/master/main.cpp).

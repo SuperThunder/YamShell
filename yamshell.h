@@ -38,9 +38,6 @@ public:
 private:
     BufferedSerial _bf;
     Thread _input_thread;
-    //TODO May want EventQueue to allow for ISRs to fire off printfs
-    //also put all output printing (write/print/println/printf) into the EventQeuue, might allow functions to print with less time cost in the function than direct calls
-    //      - The underlying functions could be private (all printing done in the thread) or public (option of using the queue or not)
 
     //Array of callbacks to call for a given command string
     //TODO dynamic registration isn't great. There is probably some way to use C++ features so that callback handlers can all be registered at compile time.

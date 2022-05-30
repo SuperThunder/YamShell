@@ -33,7 +33,7 @@ void YamShell::write(const void *buf, std::size_t len)
         //put old input back
         _bf.write(_linebuf, _lineind);
     }
-    else 
+    else
     {
         _bf.write(buf, len);
     }
